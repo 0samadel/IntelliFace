@@ -1,0 +1,100 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# File    : pubspec.yaml
+# Purpose : Defines the configuration for the Flutter project including:
+#           - Project metadata (name, version, description)
+#           - SDK constraints
+#           - Dependencies (packages used by the app)
+#           - Asset and font declarations
+#           - Linting and testing setup
+#
+# Notes   : This configuration powers a Flutter web admin panel called
+#           "Intelliface Admin" for managing employees, departments, attendance,
+#           and face recognition features.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: intelliface_admin
+description: >
+  A modern Flutter web dashboard for managing employees, departments,
+  attendance, and facial recognition using admin controls.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+# -----------------------------------------------------------------------------
+# SDK Environment
+# -----------------------------------------------------------------------------
+environment:
+  sdk: '>=3.2.3 <4.0.0' # Adjusted for broader compatibility, you can keep yours if needed
+
+# -----------------------------------------------------------------------------
+# Project Dependencies
+# -----------------------------------------------------------------------------
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & Icons
+  cupertino_icons: ^1.0.8
+  font_awesome_flutter: ^10.8.0
+  flutter_svg: ^2.0.7
+  google_fonts: ^6.1.0        # <-- CORRECTED INDENTATION
+  lucide_icons: ^0.257.0    # <-- CORRECTED INDENTATION
+  provider: ^6.1.1
+  flutter_animate: ^4.5.0
+  shimmer: ^3.0.0
+  dotted_border: ^2.1.0
+
+  # Charts & Maps
+  fl_chart: ^0.66.0
+  google_maps_flutter: ^2.5.3 # Updated to a more recent version
+
+  # Internationalization & Formatting
+  intl: ^0.18.1 # Updated to a more recent version
+
+  # HTTP & State Management
+  http: ^1.1.0 # Updated to a more recent version
+  shared_preferences: ^2.2.2
+
+  # User Feedback
+  fluttertoast: ^8.2.4
+
+  # File & Media Handling
+  image_picker: ^1.0.7
+  file_picker: ^6.1.1 # Updated to a more recent version
+  path_provider: ^2.1.2
+  path: ^1.9.0
+  mime: ^1.0.5
+
+
+# -----------------------------------------------------------------------------
+# Development Dependencies
+# -----------------------------------------------------------------------------
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1 # Updated to a more recent version
+
+# -----------------------------------------------------------------------------
+# Flutter Project Configuration
+# -----------------------------------------------------------------------------
+flutter:
+  uses-material-design: true
+
+  # Assets used in the app (images, icons, etc.)
+  assets:
+    - assets/logo.png
+    - assets/profile.png
+    - assets/icon.png
+    - assets/logo_white.png   # <-- ADDED for modernist design
+    - assets/noise.png       # <-- ADDED for modernist design
+    - assets/logo_face_light.png
+    - assets/logo_face_dark.png
+    - assets/profile_photo.jpg
+
+  # Custom Fonts
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: fonts/Nunito-Regular.ttf
+        - asset: fonts/Nunito-Bold.ttf
+          weight: 700

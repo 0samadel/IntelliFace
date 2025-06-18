@@ -1,0 +1,109 @@
+
+###### IntelliFace API (Backend) ######
+
+A powerful Node.js + MongoDB REST API backend for the 
+**IntelliFace** platform — a smart attendance and user management 
+system with integrated face recognition powered by Python microservices.
+
+---
+
+## Features
+
+- JWT Authentication (Login & Registration)
+- User & Role Management (Admin / Employee)
+- Location-Based Attendance (Check-In/Check-Out)
+- Face Recognition (via Flask Microservice)
+- Dashboard Statistics
+- Attendance Logs & Daily Tracking
+- Department & Location CRUD APIs
+- Profile & Face Image Uploads (Multer)
+
+---
+
+## Tech Stack
+
+- **Node.js** / **Express**
+- **MongoDB** / **Mongoose**
+- **JWT** for Authentication
+- **Multer** for File Uploads
+- **Axios** for microservice communication
+- **Python Flask** (external) for face processing
+
+---
+
+## Installation & Setup
+
+---
+
+## Project Structure
+
+intelliface_api/
+│
+├── 📦 config/
+│   └── db.js                      # Optional: Mongoose DB connection logic
+│
+├── 📂 controllers/                # Route handlers for business logic
+│   ├── attendanceController.js    # Attendance check-in/check-out
+│   ├── authController.js          # Login and registration logic
+│   ├── dashboardController.js     # Stats and metrics
+│   ├── departmentController.js    # CRUD for departments
+│   ├── locationController.js      # CRUD for geofenced locations
+│   ├── todo.controller.js         # Todo operations
+│   ├── userController.js          # Admin user/employee operations
+│   └── userProfileController.js   # View and update profile info
+│
+├── 📂 middleware/                 # Middlewares for auth and file upload
+│   ├── authMiddleware.js          # verifyToken, verifyAdmin
+│   └── uploadMiddleware.js        # Multer config for profile images
+│
+├── 📂 models/                     # Mongoose schemas/models
+│   ├── Attendance.js              # Attendance schema
+│   ├── Department.js              # Department schema
+│   ├── Location.js                # Location schema
+│   ├── Todo.js                    # Todo schema
+│   └── User.js                    # Admin and employee model
+│
+├── 📂 routes/                     # Route definitions and middleware chains
+│   ├── attendanceRoutes.js        # /api/attendance
+│   ├── authRoutes.js              # /api/auth
+│   ├── dashboardRoutes.js         # /api/dashboard
+│   ├── departmentRoutes.js        # /api/departments
+│   ├── faceRoutes.js              # /api/faces (enroll, verify)
+│   ├── locationRoutes.js          # /api/locations
+│   ├── profileRoutes.js           # /api/profile
+│   ├── todo.routes.js             # /api/todos
+│   └── userRoutes.js              # /api/users
+│
+├── 📂 services/                   # External service handlers
+│   └── faceRecognitionService.js  # Handles HTTP requests to Python API
+│
+├── 📂 uploads/                    # Uploaded profile and face images (via Multer)
+│   └── [profile photos].jpg
+│
+├── 📜 createAdmin.js              # One-time script to create default admin
+├── 📜 server.js                   # Main entry point - sets up Express server
+├── 📜 .env                        # Environment variables (JWT_SECRET, DB, etc.)
+├── 📜 .env.example                # Sample template of .env for development
+├── 📜 package.json                # Project metadata and dependencies
+├── 📜 README.md                   # Project documentation
+└── 📜 .gitignore                  # Ignore node_modules, .env, etc.
+
+
+---
+
+
+```bash
+# Clone the repository
+git clone https://github.com/0samadel/intelliface_api
+cd intelliface_api
+
+# Install dependencies
+npm install
+
+# Create .env file
+cp .env.example .env
+
+# Start the server
+npm run dev
+
+

@@ -1,0 +1,7 @@
+flutter_native_splash:
+  color: "#0047B3"   # ✅ your brand blue
+  image: assets/logo.png   # ✅ use your app logo
+  android: true
+  ios: true
+  android_gravity: center
+  ios_content_mode: center
