@@ -1,0 +1,29 @@
+# ==============================================================================
+# requirements.txt - Python Dependencies for Face Recognition Microservice
+# Description : Lists all required packages for running the Flask + DeepFace API
+# Environment : Python 3.9 (aligned with Dockerfile base image)
+# ==============================================================================
+
+# Web framework for building RESTful APIs
+Flask==3.0.3
+
+# Core numerical computation library used for image data handling
+numpy>=1.23.0
+
+# Face recognition and analysis framework (uses multiple deep models internally)
+deepface
+
+# Production-ready WSGI server for running Flask apps
+gunicorn==22.0.0
+
+# Imaging library used to process and convert image input
+Pillow>=9.0.0
+
+# Inference engine for ONNX-based models (optional in DeepFace, used by some backends)
+onnxruntime
+
+# TensorFlow for running the DeepFace models (SFace, ArcFace, VGG-Face, etc.)
+tensorflow==2.16.2  # Pinned to a compatible and stable version
+
+# TensorFlow Keras — required for compatibility with tf.keras imports in DeepFace
+tf-keras
