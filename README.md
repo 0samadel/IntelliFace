@@ -27,11 +27,11 @@ IntelliFace/
 
 ## Tech Stack
 
-| Component              | Stack                                     |
-|------------------------|--------------------------------------------|
-| Web Admin Dashboard    | Flutter (Web)                             |
-| Employee App           | Flutter (Android/iOS)                     |
-| Backend API            | Node.js, Express, MongoDB Atlas, JWT      |
+| Component              | Stack                                         |
+|------------------------|-----------------------------------------------|
+| Web Admin Dashboard    | Flutter (Web)                                 |
+| Employee App           | Flutter (Android/iOS)                         |
+| Backend API            | Node.js, Express, MongoDB Atlas, JWT          |
 | Face Recognition       | Python, Flask, OpenCV, dlib, face_recognition |
 
 ---
@@ -97,21 +97,18 @@ flutter run
 
 ---
 
-## Team Members
+## Developed By
 
-- Osama Alobıdy (B2105.090022)
-- Abdullah Alshalfi (B2005.090021)
-- Emir Odabaş (B2205.010164)
-- Abdulrahman Raihan (B2205.090029)
+Osama Adel
 
 ---
 
 ## Supervisor
 
-**Prof. Dr. AHMED EL-HADAD**
+Prof. Dr. AHMED EL-HADAD
 
 ---
 
 ## License
 
-MIT License © 2025 IntelliFace Team
+MIT License © 2025 IntelliFace
